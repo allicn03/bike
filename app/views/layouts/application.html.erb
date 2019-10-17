@@ -16,18 +16,25 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", simple_pages_about_path %></li>
-        <li><%= link_to "Contact", simple_pages_contact_path %></li>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <button clas="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapse_target">
+      <a class="navbar-brand"></a>
+      <span class="navbar-text"><h4 id="navbar-brand"><%= link_to "Bike Berlin", root_path %></h4></span>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><%= link_to "About", simple_pages_about_path %></li>
+        <li class="nav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
       </ul>
     </nav>
 
     <%= yield %>
 
-    <footer>
-      &copy; 2018 Bike Berlin
+    <footer class="fixed-bottom">
+      <p>&copy; <%=Date.today.year %><a href="allicndev.herokuapp.com"> allicndev </a></p>
     </footer>
   </body>
 </html>
