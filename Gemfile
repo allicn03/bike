@@ -57,3 +57,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # devise for user authentication
 gem 'devise'
+# cancancan for user authorization
+gem 'cancancan', '~> 1.10'
